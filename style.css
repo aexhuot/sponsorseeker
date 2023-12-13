@@ -1,38 +1,23 @@
 /* Custom CSS for Voiceflow Chat Widget */
 
-/* Styles for the container of the chat widget, if necessary */
-.vf-chat-container {
-    /* Adjust container styles if needed */
-}
+/*
+  ASSISTANT RESPONSES
+  Customize the style and layout of assistant response messages.
+*/
 
-/* Styles for messages from the user */
-.vf-chat-message-user {
-    background-color: #ff0000; /* Red background for user messages */
-    color: #ffffff; /* White text for better readability */
-    /* Add any additional styling for user messages here */
-}
-
-/* Styles for messages from the assistant */
-.vf-chat-message-assistant {
+/* Targeted styling for just the Assistant messages. */
+.vfrc-system-response .vfrc-message {
     background-color: #ff0000; /* Red background for assistant messages */
     color: #ffffff; /* White text for better readability */
-    /* Add any additional styling for assistant messages here */
 }
 
-/* You may want to style the message bubbles to have some padding, rounded corners, etc. */
-.vf-chat-message-user, .vf-chat-message-assistant {
-    padding: 10px; /* Example padding */
-    border-radius: 5px; /* Example rounded corners */
-    margin-bottom: 5px; /* Space between messages */
-    display: inline-block; /* To wrap the content */
-    max-width: 80%; /* To ensure the messages don't stretch too wide */
-}
+/*
+  USER RESPONSES
+  Customize the style and layout of users response messages.
+*/
 
-/* Style for the input area where the user types their message */
-.vf-chat-input {
-    width: 100%; /* Full width of the container */
-    padding: 10px; /* Padding inside the input area */
-    /* Additional styling for input area */
+/* Targeted styling for just the User messages */
+.vfrc-user-response .vfrc-message {
+    background-color: #ff0000; /* Red background for user messages */
+    color: #ffffff; /* White text for better readability */
 }
-
-/* Add other custom styles as needed */
