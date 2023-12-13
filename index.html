@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Widget</title>
+</head>
+<body>
+  <iframe id="vfchatframe"></iframe>
+
+  <script>
+    var iframe = document.getElementById('vfchatframe');
+    var iframeDocument = iframe.contentWindow.document;
+
+    var script = iframeDocument.createElement('script');
+    script.innerHTML = `(function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+            window.voiceflow.chat.load({
+                verify: { projectID: '656f5abfc17f6f0007238cf8' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'development',
+                assistant: {
+                    stylesheet: "https://aexhuot.github.io/sponsorseeker/style.css"
+                }
+            }).then(() => {
+                window.voiceflow.chat.hide()
+                setTimeout(function () {
+                    window.voiceflow.chat.open();
+                    window.voiceflow.chat.show()
+                }, 500)});
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');`;
+
+    iframeDocument.body.appendChild(script);
+  </script>
+</body>
+</html>
