@@ -1,19 +1,38 @@
-/* style.css - Styles for Voiceflow Chat Widget */
+/* Custom CSS for Voiceflow Chat Widget */
 
+/* Styles for the container of the chat widget, if necessary */
 .vf-chat-container {
-    /* Container styles */
+    /* Adjust container styles if needed */
 }
 
+/* Styles for messages from the user */
 .vf-chat-message-user {
-    /* Styles for messages from the user */
-    background-color: #e8e8e8;
-    color: #333;
+    background-color: #ff0000; /* Red background for user messages */
+    color: #ffffff; /* White text for better readability */
+    /* Add any additional styling for user messages here */
 }
 
+/* Styles for messages from the assistant */
 .vf-chat-message-assistant {
-    /* Styles for messages from the assistant */
-    background-color: #ff0000; /* Red background */
-    color: #ffffff; /* White text */
+    background-color: #ff0000; /* Red background for assistant messages */
+    color: #ffffff; /* White text for better readability */
+    /* Add any additional styling for assistant messages here */
+}
+
+/* You may want to style the message bubbles to have some padding, rounded corners, etc. */
+.vf-chat-message-user, .vf-chat-message-assistant {
+    padding: 10px; /* Example padding */
+    border-radius: 5px; /* Example rounded corners */
+    margin-bottom: 5px; /* Space between messages */
+    display: inline-block; /* To wrap the content */
+    max-width: 80%; /* To ensure the messages don't stretch too wide */
+}
+
+/* Style for the input area where the user types their message */
+.vf-chat-input {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the input area */
+    /* Additional styling for input area */
 }
 
 /* Add other custom styles as needed */
