@@ -1,4 +1,5 @@
 /* style.css - Styles for Voiceflow Chat Widget */
+
 .vf-chat-container {
     /* Container styles */
 }
@@ -11,8 +12,8 @@
 
 .vf-chat-message-assistant {
     /* Styles for messages from the assistant */
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #ff0000; /* Red background */
+    color: #ffffff; /* White text */
 }
 
 /* Add other custom styles as needed */
