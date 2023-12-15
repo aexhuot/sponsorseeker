@@ -7,37 +7,27 @@
     <link rel="stylesheet" href="https://aexhuot.github.io/sponsorseeker/style.css">
 </head>
 <body>
-    <iframe id="vfchatframe" style="width: 100vw; height: 100vh; border: none;"></iframe>
-    <script>
-        window.onload = function() {
-            var iframe = document.getElementById('vfchatframe');
-            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
-            var script = iframeDocument.createElement('script');
-            script.innerHTML = `(function(d, t) {
-                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                v.onload = function() {
-                    window.voiceflow.chat.load({
-                        verify: { projectID: '656f5abfc17f6f0007238cf8' },
-                        url: 'https://general-runtime.voiceflow.com',
-                        versionID: 'development',
-                        assistant: {
-                            stylesheet: "https://aexhuot.github.io/sponsorseeker/style.css"
-                        }
-                    }).then(() => {
-                        window.voiceflow.chat.hide()
-                        setTimeout(function () {
-                            window.voiceflow.chat.open();
-                            window.voiceflow.chat.show()
-                        }, 500)});
-                };
-                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
-                v.type = "text/javascript"; 
-                s.parentNode.insertBefore(v, s);
-            })(document, 'script');`;
-
-            iframeDocument.body.appendChild(script);
-        };
-    </script>
+<script type="text/javascript">
+(function (d, t) {
+var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+v.onload = function () {
+window.voiceflow.chat.load({ verify: { projectID: '656f5abfc17f6f0007238cf8' }, url: 'https://general-runtime.voiceflow.com/', versionID: 'production' }).then(() => {setTimeout(() => {window.voiceflow.chat.open();}, 500)});
+}
+var interval = setInterval(function () {
+var chatDiv = d.getElementById('voiceflow-chat');
+if (chatDiv) {
+clearInterval(interval);
+var parentDiv = d.getElementsByClassName("inner")[0];
+var targetDiv = d.getElementById('contact');
+parentDiv.insertBefore(chatDiv, targetDiv);
+}
+}, 100);
+v.src = "https://voiceflow.seefusion.tech/embed/widget/bundle.mjs";
+v.type = "text/javascript";
+s.parentNode.insertBefore(v, s);
+})(document, 'script');
+</script>
+<link rel="stylesheet" href="https://voiceflow.seefusion.tech/embed/chat/style.css">
+<div id="voiceflow-chat" style="width: 100%; max-width: 90%; height: 80vh; margin: 2rem auto;"></div>
 </body>
 </html>
